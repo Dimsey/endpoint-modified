@@ -304,8 +304,8 @@ func Start(test fn, clean ...fn) {
 	}()
 
 	select {
-	case <-time.After(180 * time.Second):
-		Say("Test timed out after 180 seconds")
+	case <-time.After(90 * time.Second):
+		Say("Test timed out after 90 seconds")
 		Stop(TimeoutExceeded)
 	}
 }
